@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+:root {
+  --cor1: rgba(128, 128, 128, 0.938);
+  --cor2: rgb(19, 1, 1);
+  --cor3: #eeeeee;
+  --cor4: rgb(145, 203, 186);
+  /* --cor3:rgb(224, 83, 201); */
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-image: linear-gradient(#eeeeee, transparent);
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+footer {
+  background-color: var(--cor2);
+  color: var(--cor3);
+}
+
+footer i {
+  color: var(--cor3);
+  justify-self: end;
+}
+
+/* -------------------------------- Suas classes aqui -------------------------------- */
+
+.nav-superior {
+  color: var(--cor2);
+  background-color: var(--cor3);
+}
+
+.nav-superior i {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.nav-superior a:visited{
+    color: var(--cor2);
+}
+
+@media (min-width: 576px) {
+  nav i {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+}
+
+.nav-item {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+.nav-lateral {
+  background-image: linear-gradient(#eeeeee, transparent);
+  min-width: 10%;
+}
+
+
+/* Configuração do container principal */
+.avisos {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px; /* Espaço entre as colunas */
+  width: 80%;
+  margin: auto;
+}
+
+/* Coluna da lista de avisos */
+.avisos-container {
+  flex: 2; /* Ocupa mais espaço */
+  background-color: var(--cor3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite rolagem, se necessário */
+  max-width: 600px;
+  min-width: 600px;
+}
+
+/* Coluna do formulário */
+.form-container {
+  flex: 1; /* Ocupa menos espaço */
+  background-color: var(--cor3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  min-width: 600px;
+}
+
+/* Títulos das colunas */
+.avisos-container h2,
+.form-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "DM Serif Text", serif; /* Fonte personalizada */
+}
+
+/* Lista de avisos */
+.avisos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avisos-list li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: var(--cor3);
+  border: 1px solid var(--cor2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover nos avisos */
+.avisos-list li:hover {
+  background-color: var(--cor4);
+  color: var(--cor2);
+}
+
+/* Modal (estilo e responsividade) */
+.modal-hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--cor3);
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: var(--cor2);
+  cursor: pointer;
+}
+
+/* CLASSE NÃO SEMÃNTICA o.O */
+
+.main {
+  background-image: url("../img/fundo.png");
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* Navbar Lateral */
+.nav-lateral {
+  background-image: linear-gradient(#eeeeee, transparent);
+}
+
+.nav-item {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+.bg-hover:hover {
+  background-color: var(--cor4);
+}
+
+/* Footer medias sociais */
+.div-socialmedia i {
+  color: var(--cor3);
+  transition: color 0.5s;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 60px; /* Posiciona o texto acima do botão */
+  background-color: #25d366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#whatsapp-btn img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#whatsapp-btn:hover img {
+  transform: scale(1.1); /* Efeito de zoom no ícone */
+}
+
+#whatsapp-btn:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+#cria-aviso {
+  font-family: "Crimson Pro", serif; /* Nova fonte */
+  font-size: 2rem; /* Ajuste do tamanho da fonte */
+  font-weight: 650; /* Peso da fonte para destaque */
+  color: #404040;
+  margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+#instagram i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  ); /*Instagram */
+  color: transparent; /* Faz o gradiente ser visível */
+  background-clip: text;
+}
+
+#facebook i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #3b5998,
+    #2f55a4,
+    #2050b3
+  ); /*Facebook */
+  color: transparent;
+  background-clip: text;
+}
+
+#linkedin i:hover {
+  background-image: linear-gradient(
+    45deg,
+    #296d8d,
+    #1d7199,
+    #0d76a9
+  ); /* Linkindin */
+  color: transparent;
+  background-clip: text;
+}
+
+#youtube i:hover {
+  background-image: linear-gradient(45deg, #d11b15, #a70702);
+  color: transparent;
+  background-clip: text;
+}
+
+#whatsapp i:hover {
+  background-image: linear-gradient(45deg, #07ff77, #00ff84);
+  color: transparent;
+  background-clip: text;
+}
+
+#telefone i:hover {
+  background-image: linear-gradient(45deg, #0059ff, #001a49);
+  color: transparent;
+  background-clip: text;
+}
+
+/* -------------------------------- Seus #id aqui -------------------------------- */

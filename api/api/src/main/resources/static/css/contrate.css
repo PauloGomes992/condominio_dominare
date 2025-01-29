@@ -1,0 +1,276 @@
+:root {
+  --cor1: rgb(161, 218, 234);
+  --cor2: rgb(19, 1, 1);
+  --cor3: rgb(109, 174, 202);
+}
+
+/* Resetando margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  color: var(--cor2);
+  background-color: var(--cor3);
+}
+
+/* Seção Contrate Já */
+#contrate {
+  background-color: var(--cor1);
+  padding: 40px 20px 40px 20px;
+}
+
+#contrate .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--cor1);
+  margin-bottom: 20px;
+}
+
+#contrate p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Benefícios */
+.beneficios {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.beneficio {
+  background-color: var(--cor1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 22%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.beneficio:hover {
+  transform: translateY(-10px);
+}
+
+.beneficio h3 {
+  font-size: 22px;
+  color: var(--cor2);
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta {
+  margin-top: 50px;
+  background-color: var(--cor1);
+  padding: 30px 20px;
+  border-radius: 8px;
+}
+
+.cta h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn-contratar-geral {
+  background-color: var(--cor2);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contratar-geral:hover {
+  background-color: #000000db;
+}
+
+/* Preços e Planos */
+.precos {
+  margin-top: 60px;
+}
+
+.planos {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.plano {
+  background-color: var(--cor1);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plano h4 {
+  font-size: 24px;
+  color: var(--cor2);
+  margin-bottom: 15px;
+}
+
+.plano p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.preco {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-contratar-plano {
+  background-color: var(--cor2);
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contratar-plano:hover {
+  background-color: #000000db;
+
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor2);
+  color: var(--cor1);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer i {
+  color: var(--cor3);
+  justify-self: end;
+}
+
+#instagram i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  ); /*Instagram */
+  color: transparent; /* Faz o gradiente ser visível */
+  background-clip: text;
+}
+
+#facebook i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #3b5998,
+    #2f55a4,
+    #2050b3
+  ); /*Facebook */
+  color: transparent;
+  background-clip: text;
+}
+
+#linkedin i:hover {
+  background-image: linear-gradient(
+    45deg,
+    #296d8d,
+    #1d7199,
+    #0d76a9
+  ); /* Linkindin */
+  color: transparent;
+  background-clip: text;
+}
+
+#youtube i:hover {
+  background-image: linear-gradient(45deg, #d11b15, #a70702);
+  color: transparent;
+  background-clip: text;
+}
+
+#whatsapp i:hover {
+  background-image: linear-gradient(45deg, #07ff77, #00ff84);
+  color: transparent;
+  background-clip: text;
+}
+
+#telefone i:hover {
+  background-image: linear-gradient(45deg, #0059ff, #001a49);
+  color: transparent;
+  background-clip: text;
+}

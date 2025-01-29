@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+:root {
+  --cor1: rgba(128, 128, 128, 0.938);
+  --cor2: rgb(19, 1, 1);
+  --cor3: #eeeeee;
+  --cor4: rgb(145, 203, 186);
+  /* --cor3:rgb(224, 83, 201); */
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-superior {
+  color: var(--cor2);
+  background-color: var(--cor3);
+}
+
+.nav-superior i {
+  font-size: 50px;
+  margin-right: 20px;
+}
+.nav-superior a:visited {
+  color: var(--cor2);
+}
+
+@media (min-width: 576px) {
+  nav i {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+}
+
+nav {
+  background-image: linear-gradient(#eeeeee, transparent);
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+footer {
+  background-color: var(--cor2);
+  color: var(--cor3);
+}
+
+footer i {
+  color: var(--cor3);
+  justify-self: end;
+}
+
+/* -------------------------------- Suas classes aqui -------------------------------- */
+
+/* CLASSE NÃO SEMÃNTICA o.O */
+
+.main {
+  background-image: url("../img/fundo.png");
+  background-size: cover;
+  flex: 1;
+  display: flex;
+}
+
+/* Navbar Lateral */
+.nav-lateral {
+  background-image: linear-gradient(#eeeeee, transparent);
+  min-width: 10%;
+}
+
+.nav-item {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+.bg-hover:hover {
+  background-color: var(--cor4);
+}
+
+/* Tela central */
+.atualizar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: var(--cor3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px var(--cor1);
+  width: 100%;
+  max-width: 600px; /* Ajuste de largura do formulário */
+}
+
+/* Ajustes para os inputs e labels */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--cor2);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--cor1);
+  border-radius: 5px;
+  background-color: var(--cor4);
+  color: var(--cor2);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 8px var(--cor4);
+  border-color: var(--cor4);
+  outline: none;
+}
+
+/* Botão */
+.btn-primary {
+  background-color: var(--cor4);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--cor2);
+  color: var(--cor3);
+  transform: scale(1.05);
+}
+
+/* Centralizar botão */
+.text-center {
+  text-align: center;
+}
+
+/* Botão do whatspp */
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#whatsapp-btn img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#whatsapp-btn:hover img {
+  transform: scale(1.1); /* Efeito de zoom no ícone */
+}
+
+#whatsapp-btn:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 60px; /* Posiciona o texto acima do botão */
+  background-color: #25d366; /* Cor do fundo da tooltip (verde do WhatsApp) */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Footer medias sociais */
+
+.div-socialmedia i {
+  color: var(--cor3);
+  transition: color 0.5s;
+}
+
+#instagram i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  ); /*Instagram */
+  color: transparent; /* Faz o gradiente ser visível */
+  background-clip: text;
+}
+
+#facebook i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #3b5998,
+    #2f55a4,
+    #2050b3
+  ); /*Facebook */
+  color: transparent;
+  background-clip: text;
+}
+
+#linkedin i:hover {
+  background-image: linear-gradient(
+    45deg,
+    #296d8d,
+    #1d7199,
+    #0d76a9
+  ); /* Linkindin */
+  color: transparent;
+  background-clip: text;
+}
+
+#youtube i:hover {
+  background-image: linear-gradient(45deg, #d11b15, #a70702);
+  color: transparent;
+  background-clip: text;
+}
+
+#whatsapp i:hover {
+  background-image: linear-gradient(45deg, #07ff77, #00ff84);
+  color: transparent;
+  background-clip: text;
+}
+
+#telefone i:hover {
+  background-image: linear-gradient(45deg, #0059ff, #001a49);
+  color: transparent;
+  background-clip: text;
+}
+
+/* -------------------------------- Seus #id aqui -------------------------------- */

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrate o Nosso Sistema - DOMinare</title>
+    <link rel="stylesheet" th:href="@{/css/contrate.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid text topo">
+      <div class="logo">
+        <a th:href="@{/}"> <img  th:src="@{img/logo.png}" alt="Logo da Dominara" /></a>
+      </div>
+
+      <a class="login nav-link d-block d-xl-none d-md-block d-lg-none" href="#"><i
+          class="bi bi-file-person fs-1 mx-5"></i></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/}" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/sobre}">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/parceiros}">Parceiros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/contrate}">Contrate já</a>
+          </li>
+
+          <li class="nav-item dropdown"></li>
+
+          <li class="nav-item list-unstyled"></li>
+        </ul>
+
+        <a class="nav-link d-none d-md-none d-xl-block d-lg-block" th:href="@{/login}"><i
+            class="bi bi-file-person fs-1 mx-5"></i></a>
+      </div>
+    </div>
+  </nav>
+
+    <section id="contrate">
+        <div class="container">
+            <h2>Contrate o Nosso Sistema de Gerenciamento de Condomínios</h2>
+            <p>O DOMinare é a solução completa para gerenciar o seu condomínio de maneira simples, eficiente e sem burocracia. Organize finanças, comunicação, manutenção e muito mais em uma plataforma intuitiva e de fácil acesso!</p>
+
+            <div class="beneficios row">
+                <div class="beneficio col-12 col-md-2">
+                    <h3>Gestão de Moradores</h3>
+                    <p>Controle de todos os apartamentos e moradores do prédio.</p>
+                </div>
+                <div class="beneficio col-12 col-md-2">
+                    <h3>Gestão de Visitantes</h3>
+                    <p>Tenha o controle de todas as pessoas que entram no prédio.</p>
+                </div>
+                <div class="beneficio col-12 col-md-2">
+                    <h3>Quadro de Avisos</h3>
+                    <p>Fique atualizado de tudo que acontece no condomínio.</p>
+                </div>
+                <div class="beneficio col-12 col-md-2">
+                    <h3>Votação Online</h3>
+                    <p>Participe de todas as pautas importantes do condomínio do conforto da sua casa.</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <h3>Comece Agora Mesmo e Organize Seu Condomínio de Forma Simples e Eficiente!</h3>
+                <p>Experimente todos os recursos do DOMinare com uma **demonstração gratuita** ou assine agora para ter acesso completo ao sistema.</p>
+                <button class="btn-contratar-geral">Contrate Agora</button>
+            </div>
+
+            <div class="precos">
+                <h3>Escolha o Plano Ideal para o Seu Condomínio</h3>
+                <div class="planos row">
+                    <div class="plano col-12 col-md-3">
+                        <h4>Plano Básico</h4>
+                        <p>Ideal para condomínios pequenos. Inclui gestão de finanças, comunicação e relatórios.</p>
+                        <p class="preco">R$ 199,90/mês</p>
+                        <button class="btn-contratar-plano">Contratar</button>
+                    </div>
+                    <div class="plano col-12 col-md-3">
+                        <h4>Plano Premium</h4>
+                        <p>Para condomínios de médio porte. Inclui todos os recursos do Plano Básico + manutenções e controle de documentos.</p>
+                        <p class="preco">R$ 399,90/mês</p>
+                        <button class="btn-contratar-plano">Contratar</button>
+                    </div>
+                    <div class="plano col-12 col-md-3">
+                        <h4>Plano Empresarial</h4>
+                        <p>Plano completo para grandes condomínios. Acesso total a todos os recursos + suporte dedicado.</p>
+                        <p class="preco">R$ 699,90/mês</p>
+                        <button class="btn-contratar-plano">Contratar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+  <footer class="text-center m-0">
+    <div class="container row mx-auto text-center footer">
+      <div id="telefone" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-telephone fs-4 px-4"></i></div>
+        </a>
+      </div>
+
+      <div id="whatsapp" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-whatsapp fs-4 px-4"></i></div>
+        </a>
+      </div>
+
+      <div id="youtube" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-youtube fs-4 px-4"></i></div>
+        </a>
+      </div>
+
+      <div id="linkedin" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-linkedin fs-4 px-4"></i></div>
+        </a>
+      </div>
+
+      <div id="facebook" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-facebook fs-4 px-4"></i></div>
+        </a>
+      </div>
+
+      <div id="instagram" class="col-6 col-md-4 col-xxl-2 div-socialmedia">
+        <a href="">
+          <div><i class="bi bi-instagram fs-4 px-4"></i></div>
+        </a>
+      </div>
+    </div>
+
+    <p class="card-text py-3">
+      2024 <i class="bi bi-c-circle"></i> Desenvolvido por Alunos | Projeto
+      fictício sem fins comerciais.
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+:root {
+  --cor1: rgb(161, 218, 234);
+  --cor2: rgb(19, 1, 1);
+  --cor3: rgb(109, 174, 202);
+}
+
+body,
+html {
+  min-height: 100% !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(161, 218, 234, 1),
+    rgba(161, 218, 234, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+
+.topo {
+  background-color: var(--cor3) !important;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+  .div-icons {
+    font-size: 30px !important;
+  }
+  .cards_p {
+    font-size: 15px;
+  }
+}
+
+
+
+.img_principal_p {
+  max-height: 100px;
+}
+
+.img_principal_g {
+  max-height: 350px;
+}
+
+.div-cartoes {
+  padding-bottom: 15px !important;
+}
+
+.div-socialmedia i {
+  color: var(--cor3);
+  transition: color 0.5s;
+}
+
+.div-b {
+  border: 1px solid red;
+}
+.div-icons {
+  font-size: 50px;
+  color: var(--cor2);
+}
+
+footer {
+  background-color: var(--cor2);
+  color: var(--cor1);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer i {
+  color: var(--cor3);
+  justify-self: end;
+}
+
+
+
+#instagram i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  ); /*Instagram */
+  color: transparent; /* Faz o gradiente ser visível */
+  background-clip: text;
+}
+
+#facebook i:hover {
+  background-image: linear-gradient(
+    90deg,
+    #3b5998,
+    #2f55a4,
+    #2050b3
+  ); /*Facebook */
+  color: transparent;
+  background-clip: text;
+}
+
+#linkedin i:hover {
+  background-image: linear-gradient(
+    45deg,
+    #296d8d,
+    #1d7199,
+    #0d76a9
+  ); /* Linkindin */
+  color: transparent;
+  background-clip: text;
+}
+
+#youtube i:hover {
+  background-image: linear-gradient(45deg, #d11b15, #a70702);
+  color: transparent;
+  background-clip: text;
+}
+
+#whatsapp i:hover {
+  background-image: linear-gradient(45deg, #07ff77, #00ff84);
+  color: transparent;
+  background-clip: text;
+}
+
+#telefone i:hover {
+  background-image: linear-gradient(45deg, #0059ff, #001a49);
+  color: transparent;
+  background-clip: text;
+}
